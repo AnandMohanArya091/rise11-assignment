@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Legal Dashboard Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React-based dashboard for a legal claims management system. It provides a user interface for filing claims, tracking progress, and managing legal disputes.
 
-In the project directory, you can run:
+## Approach
 
-### `npm start`
+1. *Component-Based Architecture*: The dashboard is built using a component-based approach, with each major section of the UI (sidebar, progress steps, claim form) implemented as a separate React component.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. *Simplified Structure*: We opted for a simplified project structure, integrating UI elements directly into the main components rather than using separate UI component files. This approach reduces the number of files and makes the codebase more straightforward for quick iterations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. *Responsive Design*: The layout is designed to be responsive, using Flexbox and Grid for layout management, ensuring the dashboard looks good on various screen sizes.
 
-### `npm test`
+4. *Icon Integration*: We used the lucide-react library for icons, providing a consistent and scalable icon set throughout the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. *State Management*: For this version, we used React's built-in useState hook for local state management. For more complex state requirements, we might consider using Context API or a state management library like Redux in the future.
 
-### `npm run build`
+## Challenges and Solutions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. *Challenge*: Implementing a multi-step progress indicator.
+   *Solution*: We created a reusable ProgressSteps component that dynamically renders steps based on an array of step objects. This allows for easy modification of the steps in the future.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. *Challenge*: Creating a responsive layout that works well on different screen sizes.
+   *Solution*: We used a combination of Flexbox and Grid layouts, along with responsive utility classes from Tailwind CSS, to ensure the dashboard adapts well to various screen sizes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. *Challenge*: Maintaining consistent styling across different form elements.
+   *Solution*: We created custom styled form components (like buttons and inputs) that can be reused across the application, ensuring consistency in appearance and behavior.
 
-### `npm run eject`
+## Assumptions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. *User Authentication*: We assumed that user authentication is handled separately and that this dashboard would be displayed to already authenticated users.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. *API Integration*: The current implementation doesn't include actual API calls. We assumed that in a production environment, the form submissions and data fetching would be integrated with a backend API.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. *Browser Support*: We assumed that the application will be used in modern browsers that support ES6+ features and CSS Grid/Flexbox.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. *Scalability*: While the current implementation is relatively simple, we assumed that the application might need to scale in the future. The component-based structure allows for easy addition of new features or pages.
 
-## Learn More
+5. *Localization*: The current version is in English only. We assumed that localization might be a future requirement and structured the text content in a way that would make it easy to implement i18n in the future.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Structure
