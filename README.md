@@ -38,5 +38,6 @@ This project is a React-based dashboard for a legal claims management system. It
 4. *Scalability*: While the current implementation is relatively simple, we assumed that the application might need to scale in the future. The component-based structure allows for easy addition of new features or pages.
 
 5. *Localization*: The current version is in English only. We assumed that localization might be a future requirement and structured the text content in a way that would make it easy to implement i18n in the future.
-
 ## Project Structure
+![Screenshot 2024-12-14 232638](https://github.com/user-attachments/assets/8af85197-5894-464d-8629-2f8d53e9e4c2)
+
